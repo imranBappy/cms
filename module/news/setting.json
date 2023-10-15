@@ -2,7 +2,7 @@
     {
         "type": "news",
         "componentName": "news",
-        "componentLocation": "news",
+        "componentLocation": "../../../module/news/admin/News",
         "componentPosition": "left",
         "componentStatus": "active"
     }

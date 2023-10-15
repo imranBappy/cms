@@ -12,7 +12,6 @@ const PostSchema = new Schema(
     },
     type: {
       type: String,
-      enum: ["page", "post", "news", "blog"],
       default: "post",
     },
   },

@@ -21,7 +21,6 @@ export default function Home({ params }) {
   };
 
   const handleSubmit = async (e) => {
-    console.log({ content });
     e.preventDefault();
     axios
       .post(`http://localhost:5000/post/${postType}`, {

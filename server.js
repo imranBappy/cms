@@ -44,12 +44,6 @@ app.get("/", (req, res) => res.send("API Running"));
 app.post("/post/:type", async (req, res) => {
   const { type } = req.params;
 
-  console.log({
-    title: req.body.title,
-    content: req.body.content,
-    type: type,
-  });
-
   const newPost = new Post({
     title: req.body.title,
     content: req.body.content,
