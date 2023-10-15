@@ -153,6 +153,36 @@ app.post("/zip", upload.single("zip"), (req, res) => {
   // res.json({ msg: "success", pathName: req.file.originalname + "_extracted" });
 });
 
+app.post("/update", upload.single("zip"), (req, res) => {
+  const uploadDir1 = path.join(__dirname);
+  if (!fs.existsSync(uploadDir1)) {
+    fs.mkdirSync(uploadDir1);
+  }
+  const { name } = req.body;
+  const exeName = path.extname(name);
+
+  // Extract the uploaded ZIP file
+  const zipFilePath = path.join(uploadDir1, name);
+
+  const extractionPath = path.join(uploadDir);
+
+  if (!fs.existsSync(extractionPath)) {
+    fs.mkdirSync(extractionPath, { recursive: true });
+  }
+
+  // Use the unzipper library to extract the ZIP file
+  fs.createReadStream(zipFilePath).pipe(
+    unzipper.Extract({ path: extractionPath }).on("close", () => {
+      // Delete the ZIP file from the uploads directory
+      fs.unlinkSync(zipFilePath);
+      res.json({
+        msg: "success",
+        pathName: name + "_extracted",
+      });
+    })
+  );
+});
+
 app.get("/setting/:type", async (req, res) => {
   const { type = "" } = req.params;
 

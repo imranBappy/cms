@@ -1,0 +1,8 @@
+{
+    "ID": "02",
+    "Plugin Name": "News",
+    "Description": "Hello World",
+    "Author": "js",
+    "Author URI": "https://test.com",
+    "version": "1.3"
+}

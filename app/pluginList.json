@@ -1,0 +1,20 @@
+[
+    {
+        "ID": "01",
+        "Plugin Name": "blog",
+        "Description": "Hello World",
+        "Author": "js",
+        "Author URI": "https://test.com",
+        "url": "/update",
+        "version": "1.0"
+    },
+    {
+        "ID": "02",
+        "Plugin Name": "news",
+        "Description": "Hello World",
+        "Author": "js",
+        "url": "/update/news.zip",
+        "Author URI": "https://test.com",
+        "version": "1.3"
+    }
+]
