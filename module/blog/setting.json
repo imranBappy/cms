@@ -1,0 +1,16 @@
+[
+    {
+        "type": "blog",
+        "componentName": "header",
+        "componentLocation": "../../../module/blog/admin/Header",
+        "componentPosition": "left",
+        "componentStatus": "active"
+    },
+    {
+        "type": "blog",
+        "componentName": "body",
+        "componentLocation": "../../../module/blog/admin/Body",
+        "componentPosition": "left",
+        "componentStatus": "active"
+    }
+]

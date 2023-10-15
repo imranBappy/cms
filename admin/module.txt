@@ -1,0 +1,5 @@
+module
+    Blog
+        component
+            data.json
+

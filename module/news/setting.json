@@ -1,0 +1,9 @@
+[
+    {
+        "type": "news",
+        "componentName": "news",
+        "componentLocation": "news",
+        "componentPosition": "left",
+        "componentStatus": "active"
+    }
+]
